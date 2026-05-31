@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidade – SpaceKids</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #060914;
+    --surface: #0d1428;
+    --surface2: #111c38;
+    --neon-blue: #4fc3f7;
+    --neon-purple: #b39ddb;
+    --neon-pink: #f48fb1;
+    --neon-green: #69f0ae;
+    --text: #e8eaf6;
+    --muted: #8892b0;
+    --border: rgba(79,195,247,0.15);
+    --accent: #4fc3f7;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.8;
+    overflow-x: hidden;
+  }
+
+  /* Stars background */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image:
+      radial-gradient(1px 1px at 10% 15%, rgba(255,255,255,0.6) 0%, transparent 100%),
+      radial-gradient(1px 1px at 25% 40%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 40% 70%, rgba(255,255,255,0.7) 0%, transparent 100%),
+      radial-gradient(1px 1px at 55% 20%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 70% 55%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 82% 10%, rgba(255,255,255,0.6) 0%, transparent 100%),
+      radial-gradient(1px 1px at 90% 80%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 15% 90%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 60% 85%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 33% 60%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 78% 35%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 48% 48%, rgba(255,255,255,0.3) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 60px 24px 80px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .logo-ring {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: 1.5px solid var(--neon-blue);
+    box-shadow: 0 0 20px rgba(79,195,247,0.3), inset 0 0 20px rgba(79,195,247,0.05);
+    margin-bottom: 24px;
+    font-size: 32px;
+    animation: pulse 4s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 20px rgba(79,195,247,0.3), inset 0 0 20px rgba(79,195,247,0.05); }
+    50% { box-shadow: 0 0 40px rgba(79,195,247,0.5), inset 0 0 30px rgba(79,195,247,0.1); }
+  }
+
+  .app-name {
+    font-family: 'Orbitron', monospace;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--neon-blue);
+    margin-bottom: 12px;
+  }
+
+  h1 {
+    font-family: 'Orbitron', monospace;
+    font-size: clamp(22px, 5vw, 34px);
+    font-weight: 800;
+    color: var(--text);
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+
+  .last-update {
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+
+  /* Divider */
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 48px 0 40px;
+  }
+  .divider-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+  }
+  .divider-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--neon-blue);
+    opacity: 0.6;
+  }
+
+  /* Section */
+  .section {
+    margin-bottom: 40px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 32px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+  }
+
+  .section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--neon-blue), transparent);
+    border-radius: 16px 0 0 16px;
+    opacity: 0.6;
+  }
+
+  .section:hover {
+    border-color: rgba(79,195,247,0.3);
+  }
+
+  .section-number {
+    font-family: 'Orbitron', monospace;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: var(--neon-blue);
+    opacity: 0.7;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  h2 {
+    font-family: 'Orbitron', monospace;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: 0.05em;
+    margin-bottom: 16px;
+  }
+
+  p {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.8;
+    margin-bottom: 12px;
+  }
+
+  p:last-child { margin-bottom: 0; }
+
+  /* No-data list */
+  .no-list {
+    list-style: none;
+    margin: 16px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .no-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(79,195,247,0.05);
+    border: 1px solid rgba(79,195,247,0.12);
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .no-list li::before {
+    content: '✕';
+    font-size: 10px;
+    color: var(--neon-pink);
+    opacity: 0.8;
+  }
+
+  /* Highlight box */
+  .highlight {
+    background: rgba(105,240,174,0.05);
+    border: 1px solid rgba(105,240,174,0.15);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-top: 14px;
+  }
+
+  .highlight p {
+    color: rgba(105,240,174,0.85);
+    font-size: 14px;
+    margin: 0;
+  }
+
+  /* Contact */
+  .contact-card {
+    background: var(--surface2);
+    border: 1px solid rgba(179,157,219,0.2);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .contact-label {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--neon-purple);
+    font-weight: 500;
+  }
+
+  .contact-value {
+    font-size: 15px;
+    color: var(--text);
+    font-weight: 400;
+  }
+
+  .contact-email {
+    color: var(--neon-blue);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .contact-email:hover {
+    text-decoration: underline;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+  }
+
+  .footer p {
+    font-size: 12px;
+    color: var(--muted);
+    opacity: 0.5;
+    letter-spacing: 0.05em;
+  }
+
+  /* Orbit decoration */
+  .orbit-deco {
+    position: fixed;
+    top: -120px;
+    right: -120px;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    border: 1px solid rgba(79,195,247,0.05);
+    pointer-events: none;
+    z-index: 0;
+    animation: rotateSlow 60s linear infinite;
+  }
+
+  .orbit-deco::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--neon-blue);
+    opacity: 0.4;
+    transform: translateX(-50%);
+  }
+
+  @keyframes rotateSlow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  @media (max-width: 600px) {
+    .section { padding: 22px 20px; }
+    .container { padding: 40px 16px 60px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="orbit-deco"></div>
+
+<div class="container">
+
+  <header class="header">
+    <div class="logo-ring">🚀</div>
+    <div class="app-name">SpaceKids</div>
+    <h1>Política de<br>Privacidade</h1>
+    <p class="last-update">Última atualização: 31 de maio de 2026</p>
+  </header>
+
+  <!-- 1. Introdução -->
+  <div class="section">
+    <span class="section-number">01 —</span>
+    <h2>Introdução</h2>
+    <p>O SpaceKids é um aplicativo desenvolvido pela <strong style="color: var(--text); font-weight: 500;">JAM Technologies</strong> com o objetivo de organizar e disponibilizar conteúdos infantis de forma simples e acessível.</p>
+    <p>Esta Política de Privacidade descreve como o aplicativo trata as informações relacionadas ao uso da plataforma.</p>
+  </div>
+
+  <!-- 2. Coleta de Dados -->
+  <div class="section">
+    <span class="section-number">02 —</span>
+    <h2>Coleta de Dados</h2>
+    <p>O SpaceKids <strong style="color: var(--text); font-weight: 500;">não exige cadastro</strong> e não coleta diretamente informações pessoais dos usuários.</p>
+    <p>Não solicitamos:</p>
+    <ul class="no-list">
+      <li>Nome</li>
+      <li>E-mail</li>
+      <li>Telefone</li>
+      <li>Endereço</li>
+      <li>Documentos pessoais</li>
+      <li>Informações bancárias</li>
+    </ul>
+  </div>
+
+  <!-- 3. Funcionamento -->
+  <div class="section">
+    <span class="section-number">03 —</span>
+    <h2>Funcionamento do Aplicativo</h2>
+    <p>O aplicativo atua como uma plataforma de organização e acesso a conteúdos através de links previamente cadastrados.</p>
+    <p>O SpaceKids não cria perfis de usuários e não realiza monitoramento individual da navegação.</p>
+  </div>
+
+  <!-- 4. Crianças -->
+  <div class="section">
+    <span class="section-number">04 —</span>
+    <h2>Crianças</h2>
+    <p>O SpaceKids foi desenvolvido para o <strong style="color: var(--text); font-weight: 500;">público infantil</strong>.</p>
+    <div class="highlight">
+      <p>🛡️ Não coletamos intencionalmente informações pessoais de crianças ou responsáveis.</p>
+    </div>
+  </div>
+
+  <!-- 5. Publicidade -->
+  <div class="section">
+    <span class="section-number">05 —</span>
+    <h2>Publicidade</h2>
+    <p>O aplicativo poderá exibir anúncios fornecidos por parceiros de publicidade. Esses parceiros poderão coletar informações técnicas limitadas necessárias para a exibição e funcionamento dos anúncios, conforme suas próprias políticas de privacidade.</p>
+    <p>A JAM Technologies não vende dados pessoais dos usuários e não realiza publicidade comportamental direcionada a crianças.</p>
+  </div>
+
+  <!-- 6. Links Externos -->
+  <div class="section">
+    <span class="section-number">06 —</span>
+    <h2>Links Externos</h2>
+    <p>O SpaceKids pode disponibilizar acesso a conteúdos hospedados em plataformas externas. Ao acessar esses conteúdos, o usuário estará sujeito às políticas e termos de uso dos respectivos serviços.</p>
+    <p>A JAM Technologies não possui controle sobre as práticas adotadas por plataformas de terceiros.</p>
+  </div>
+
+  <!-- 7. Compartilhamento -->
+  <div class="section">
+    <span class="section-number">07 —</span>
+    <h2>Compartilhamento de Informações</h2>
+    <p>O SpaceKids não comercializa informações dos usuários. Qualquer eventual compartilhamento de informações técnicas ocorrerá apenas quando necessário para o funcionamento de serviços integrados ao aplicativo, como plataformas de publicidade.</p>
+  </div>
+
+  <!-- 8. Segurança -->
+  <div class="section">
+    <span class="section-number">08 —</span>
+    <h2>Segurança</h2>
+    <p>Adotamos medidas razoáveis para manter a segurança e a integridade do aplicativo.</p>
+  </div>
+
+  <!-- 9. Alterações -->
+  <div class="section">
+    <span class="section-number">09 —</span>
+    <h2>Alterações nesta Política</h2>
+    <p>Esta Política de Privacidade poderá ser atualizada periodicamente. As alterações entrarão em vigor após sua publicação nos canais oficiais do aplicativo.</p>
+  </div>
+
+  <!-- 10. Contato -->
+  <div class="section">
+    <span class="section-number">10 —</span>
+    <h2>Contato</h2>
+    <p>Para dúvidas relacionadas a esta Política de Privacidade:</p>
+    <div class="contact-card">
+      <div>
+        <div class="contact-label">Empresa</div>
+        <div class="contact-value">JAM Technologies</div>
+      </div>
+      <div>
+        <div class="contact-label">E-mail</div>
+        <div class="contact-value"><a href="mailto:jamtech@gmail.com" class="contact-email">jamtech@gmail.com</a></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© 2026 JAM Technologies · SpaceKids · Todos os direitos reservados</p>
+  </footer>
+
+</div>
+</body>
+</html>
